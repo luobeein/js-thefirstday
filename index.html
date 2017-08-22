@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body,ul{
+			margin: 0;
+			padding: 0;
+			font: 30px "Courier New",monospace;
+		}
+		li{
+			list-style: none;
+		}
+		#list{
+			border: 1px solid #000;
+			width: 300px;
+			height: 80px;
+			position: relative;
+		}
+		#list a{
+			display: block;
+			height: 80px;
+			line-height: 80px;
+			text-align: center;
+			text-decoration: none;
+			background: #eee;
+		}
+		#list ul{
+			position: absolute;
+			width: 300px;
+			border: 1px solid #f00;
+			top: 81px;
+			left: 0;
+			display: none;			
+		}
+	</style>
+	
+</head>
+<body>
+	<ul>
+		<li id="list">
+			<a href="#">menu</a>
+			<ul id="item">
+				<li><a href="#">menu-item1</a></li>
+				<li><a href="#">menu-item2</a></li>
+				<li><a href="#">menu-item3</a></li>
+				<li><a href="#">menu-item4</a></li>
+				<li><a href="#">menu-item5</a></li>
+			</ul>
+		</li>
+	</ul>
+	<script type="text/javascript">
+		document.getElementById('list').onmouseover=show;
+		document.getElementById('list').onmouseout=hide;
+
+		function show() {
+			// body...
+			document.getElementById('item').style.display='block';
+		}
+		function hide() {
+			// body...
+			document.getElementById('item').style.display='none';
+		}
+	</script>
+</body>
+</html>
